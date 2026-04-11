@@ -104,6 +104,17 @@ public class ENUSProvider extends AbstractModonomiconLanguageProvider implements
         this.add(TheurgyConstants.I18n.Gui.FILTER_IGNORE_DATA_COMPONENTS_BUTTON_TOOLTIP, "Ignore Data");
         this.add(TheurgyConstants.I18n.Gui.FILTER_IGNORE_DATA_COMPONENTS_BUTTON_TOOLTIP_SHIFT, "Items pass regardless of their data components (durability, enchantments and others).");
 
+        this.add(TheurgyConstants.I18n.Gui.GUI_DEMO_CHEST_BUTTON, "Chest");
+        this.add(TheurgyConstants.I18n.Gui.GUI_DEMO_PLAYER_BUTTON, "Inventory");
+        this.add(TheurgyConstants.I18n.Gui.GUI_DEMO_FILTER_BUTTON, "Filter");
+
+        this.add(TheurgyConstants.I18n.Gui.GUI_DEMO_CHEST_TITLE, "Generated chest container");
+        this.add(TheurgyConstants.I18n.Gui.GUI_DEMO_CHEST_DESCRIPTION, "Built from panel and slot-grid instructions.");
+        this.add(TheurgyConstants.I18n.Gui.GUI_DEMO_PLAYER_TITLE, "Generated player inventory");
+        this.add(TheurgyConstants.I18n.Gui.GUI_DEMO_PLAYER_DESCRIPTION, "Slots, mannequin pane, armor and crafting area are composed.");
+        this.add(TheurgyConstants.I18n.Gui.GUI_DEMO_FILTER_TITLE, "Generated filter screen");
+        this.add(TheurgyConstants.I18n.Gui.GUI_DEMO_FILTER_DESCRIPTION, "Filter slots, field and actions share the same primitives.");
+
         this.add(TheurgyConstants.I18n.Gui.SCROLL_DEFAULT_TITLE, "Choose an Option:");
         this.add(TheurgyConstants.I18n.Gui.SCROLL_TO_MODIFY, "Scroll to Modify");
         this.add(TheurgyConstants.I18n.Gui.SCROLL_TO_SELECT, "Scroll to Select");
@@ -1165,6 +1176,16 @@ public class ENUSProvider extends AbstractModonomiconLanguageProvider implements
                 "Definitely not just a wrench.",
                 "Allows configuring alchemical apparatuses and mercurial logistics networks.",
                 wandUsage
+        );
+
+        this.addItem(ItemRegistry.GUI_DEMO, "GUI Demo Tool");
+        this.addUsageTooltip(ItemRegistry.GUI_DEMO,
+                this.f("""
+                                {0} to open the generated GUI demo.
+                                Use the buttons in the screen to switch between chest, inventory and filter layouts.
+                                """,
+                        this.green("Right-Click")
+                )
         );
 
 

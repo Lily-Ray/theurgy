@@ -51,6 +51,13 @@ public class TheurgyItemModelSubProvider {
         itemModels.generateFlatItem(item, ModelTemplates.FLAT_HANDHELD_ITEM);
     }
 
+    private void registerItemHandheld(ItemModelGenerators itemModels, Item item, Identifier texture) {
+        itemModels.itemModelOutput.accept(item, ItemModelUtils.plainModel(ModelTemplates.FLAT_HANDHELD_ITEM.create(
+                ModelLocationUtils.getModelLocation(item),
+                TextureMapping.layer0(new Material(texture)),
+                itemModels.modelOutput)));
+    }
+
     //Helper to create a model for a variant but not assign it to the item directly (used for divination rod)
     private Identifier createItemHandheldVariant(ItemModelGenerators itemModels, String modelName, String texture) {
         return ModelTemplates.FLAT_HANDHELD_ITEM.create(Theurgy.loc("item/" + modelName), TextureMapping.layer0(new Material(Theurgy.loc("item/" + texture))), itemModels.modelOutput);
@@ -216,6 +223,7 @@ public class TheurgyItemModelSubProvider {
 
         this.registerItemGenerated(itemModels, ItemRegistry.COPPER_WIRE.get());
         this.registerItemHandheld(itemModels, ItemRegistry.MERCURIAL_WAND.get());
+        this.registerItemHandheld(itemModels, ItemRegistry.GUI_DEMO.get(), Identifier.withDefaultNamespace("item/iron_shovel"));
         this.registerItemGenerated(itemModels, ItemRegistry.LIST_FILTER.get());
         this.registerItemGenerated(itemModels, ItemRegistry.ATTRIBUTE_FILTER.get());
 

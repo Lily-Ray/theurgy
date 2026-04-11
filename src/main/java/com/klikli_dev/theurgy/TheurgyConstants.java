@@ -174,6 +174,17 @@ public class TheurgyConstants {
             public static final String FILTER_RESPECT_DATA_COMPONENTS_BUTTON_TOOLTIP = PREFIX + "filter.respect_data_components_button.tooltip";
             public static final String FILTER_RESPECT_DATA_COMPONENTS_BUTTON_TOOLTIP_SHIFT = PREFIX + "filter.respect_data_components_button.tooltip.shift";
 
+            public static final String GUI_DEMO_CHEST_BUTTON = PREFIX + "demo.chest_button";
+            public static final String GUI_DEMO_PLAYER_BUTTON = PREFIX + "demo.player_button";
+            public static final String GUI_DEMO_FILTER_BUTTON = PREFIX + "demo.filter_button";
+
+            public static final String GUI_DEMO_CHEST_TITLE = PREFIX + "demo.chest_title";
+            public static final String GUI_DEMO_CHEST_DESCRIPTION = PREFIX + "demo.chest_description";
+            public static final String GUI_DEMO_PLAYER_TITLE = PREFIX + "demo.player_title";
+            public static final String GUI_DEMO_PLAYER_DESCRIPTION = PREFIX + "demo.player_description";
+            public static final String GUI_DEMO_FILTER_TITLE = PREFIX + "demo.filter_title";
+            public static final String GUI_DEMO_FILTER_DESCRIPTION = PREFIX + "demo.filter_description";
+
             public static final String ATTRIBUTE_FILTER_ADD_BUTTON_TOOLTIP = PREFIX + "attribute_filter.add_button.tooltip";
             public static final String ATTRIBUTE_FILTER_ADD_INVERTED_BUTTON_TOOLTIP = PREFIX + "attribute_filter.add_inverted.tooltip";
 

@@ -22,6 +22,7 @@ import com.klikli_dev.theurgy.content.item.HandlesOnLeftClick;
 import com.klikli_dev.theurgy.content.item.HandlesOnScroll;
 import com.klikli_dev.theurgy.content.item.filter.AttributeFilterScreen;
 import com.klikli_dev.theurgy.content.item.filter.ListFilterScreen;
+import com.klikli_dev.theurgy.content.item.guidemo.GuiDemoScreen;
 import com.klikli_dev.theurgy.content.item.derivative.AlchemicalDerivativeItem;
 import com.klikli_dev.theurgy.content.item.renderer.DivinationDistanceProperty;
 import com.klikli_dev.theurgy.content.item.salt.AlchemicalSaltItem;
@@ -310,6 +311,7 @@ public class Theurgy {
         }
 
         public static void onRegisterMenuScreens(RegisterMenuScreensEvent event) {
+            event.register(MenuTypeRegistry.GUI_DEMO.get(), GuiDemoScreen::new);
             event.register(MenuTypeRegistry.LIST_FILTER.get(), ListFilterScreen::new);
             event.register(MenuTypeRegistry.ATTRIBUTE_FILTER.get(), AttributeFilterScreen::new);
         }

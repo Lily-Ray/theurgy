@@ -20,6 +20,7 @@ import com.klikli_dev.theurgy.content.item.divinationrod.DivinationRodItem;
 import com.klikli_dev.theurgy.content.item.filter.AttributeFilterItem;
 import com.klikli_dev.theurgy.content.item.filter.FilterItem;
 import com.klikli_dev.theurgy.content.item.filter.ListFilterItem;
+import com.klikli_dev.theurgy.content.item.guidemo.GuiDemoItem;
 import com.klikli_dev.theurgy.content.item.mercurialwand.MercurialWandItem;
 import com.klikli_dev.theurgy.content.item.mercurialwand.mode.MercurialWandItemMode;
 import com.klikli_dev.theurgy.content.item.wire.WireItem;
@@ -138,6 +139,9 @@ public class ItemRegistry {
                     .component(DataComponentRegistry.MERCURIAL_WAND_ITEM_MODE.get(), MercurialWandItemMode.Type.CYCLE_DIRECTION.mode())
                     .component(DataComponentRegistry.SELECTED_FREQUENCY.get(), 0)
             ));
+
+    public static final DeferredItem<GuiDemoItem> GUI_DEMO =
+            ITEMS.registerItem("gui_demo", GuiDemoItem::new);
 
     public static final DeferredItem<FilterItem> LIST_FILTER = ITEMS.registerItem("list_filter", ListFilterItem::new);
     public static final DeferredItem<FilterItem> ATTRIBUTE_FILTER = ITEMS.registerItem("attribute_filter", AttributeFilterItem::new);
